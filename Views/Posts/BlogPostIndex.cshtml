@@ -13,17 +13,12 @@
 
 @{
     ViewData["Title"] = "Blog Posts";
-
-    //var blog = Model.First<Post>().Blog;
-    //ViewData["HeaderImage"] = @imageService.DecodeImage(blog.ImageData, blog.ContentType);
-    //ViewData["MainText"] = blog.Name;
-    //ViewData["SubText"] = blog.Description;
 }
 
 <div class="row mx-auto" style="width: 80%">
     @foreach (var post in Model)
     {
-        //Is the logged in user the Author of this post??
+        // Is the logged in user the Author of this post?
         var isAuthor = false;
         if (User.Identity.IsAuthenticated)
         {

@@ -69,10 +69,13 @@ namespace BlogProject.Controllers
                 .Include(p => p.Blog)
                 .ToPagedListAsync(pageNumber, pageSize);
 
-            var blog = posts.First<Post>().Blog;
-            ViewData["HeaderImage"] = _imageService.DecodeImage(blog.ImageData, blog.ContentType);
-            ViewData["MainText"] = blog.Name;
-            ViewData["SubText"] = blog.Description;
+            if (posts.Count > 0)
+            {
+                var blog = posts.First<Post>().Blog;
+                ViewData["HeaderImage"] = _imageService.DecodeImage(blog.ImageData, blog.ContentType);
+                ViewData["MainText"] = blog.Name;
+                ViewData["SubText"] = blog.Description;
+            }
 
             return View(posts);
         }
