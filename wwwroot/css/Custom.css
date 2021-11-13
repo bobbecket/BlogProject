@@ -1,0 +1,45 @@
+﻿.btn-primary {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    line-height: .5;
+    border-radius: 10px;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #222;
+        border-color: #222;
+    }
+
+    .btn-check:focus + .btn-primary, .btn-primary:focus {
+        color: #fff;
+        background-color: #222;
+        border-color: #222;
+        box-shadow: 0 0 0 0.25rem rgba(38, 151, 175, 0.5);
+    }
+
+    .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #222;
+        border-color: #222;
+    }
+
+        .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.25rem rgba(38, 151, 175, 0.5);
+        }
+
+    .btn-primary:disabled, .btn-primary.disabled {
+        color: #fff;
+        background-color: #000;
+        border-color: #000;
+    }
+
+option {
+    font-weight: bolder;
+}
+
+div.swal2-container.swal2-center.swal2-backdrop-show > div {
+    outline: 4px solid black;
+    border: 2px solid #ff993b
+}
